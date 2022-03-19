@@ -15,14 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from document.views import editor, delete_document
+from document.views import index, delete_document
 from django.conf import settings  
 from django.conf.urls.static import static  
 
 
 
 urlpatterns = [
-    path('', editor, name='editor'),
+    path('', index , name='index'),
     path('delete_document/<int:docid>/', delete_document, name='delete_document'),
     path('admin/', admin.site.urls),
 ]

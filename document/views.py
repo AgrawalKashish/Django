@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Document
 
-def editor(request):
+def index(request):
     docid = int(request.GET.get('docid', 0))
     documents = Document.objects.all()
 
@@ -36,7 +36,7 @@ def editor(request):
         'document': document,
     }
 
-    return render(request, 'editor.html', context, )
+    return render(request, 'index.html', context, )
 
 def delete_document(request, docid):
         document = Document.objects.get(pk=docid)
