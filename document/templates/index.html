@@ -93,6 +93,9 @@
             <div>
               <label for="" >Image</label>
               <input type="file"  name="image" accept="image/*">
+              {% if document %}
+             <a href="{{ document.image.url }}" >Image:</a>
+              {% endif %}
             </div>
             <button class="btn btn-primary"
             type="submit">
