@@ -83,8 +83,7 @@
               width: 100%;
               height: 350px;
               background-color:rgb(241, 243, 243);" 
-               name="content" 
-               placeholder="Description">
+               name="content">
                {% if document %}
                {{ document.content }}
                {% endif %}
@@ -94,7 +93,7 @@
               <label for="" >Image</label>
               <input type="file"  name="image" accept="image/*">
               {% if document %}
-             <a href="{{ document.image.url }}" >Image:</a>
+             <a href="{{ document.image.url }}" >Uploaded_Image</a>
               {% endif %}
             </div>
             <button class="btn btn-primary"
